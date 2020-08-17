@@ -7,6 +7,14 @@ function scramble(array) {
   console.log(newArray);
   return newArray;
 }
+function pushArray(array) {
+  let newArray = [];
+  newArray.push(array[1]);
+  newArray.push(array[0]);
+  newArray.push(array[2]);
+  console.log(newArray);
+  return newArray;
+}
 
 // Business Logic
 $(document).ready(function() {
@@ -18,7 +26,14 @@ $(document).ready(function() {
     // let favThings = arrayAdder(fav1,fav2,fav3)
     let favThings = [fav1,fav2,fav3];
     console.log(favThings);
-    scramble(favThings);
+    //scramble(favThings);
+    let scramArray = pushArray(favThings)
+
+    $("#index1").text(scramArray[0]);
+    $("#index2").text(scramArray[1]);
+    $("#index3").text(scramArray[2]);
+
+    $("#userArray").show();
     
   });
 });
